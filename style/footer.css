@@ -1,0 +1,44 @@
+#footer {
+  width: 100%;
+  margin-top: 20px;
+  padding: 3vw 4vw;
+}
+
+#footer h4 {
+  text-transform: uppercase;
+}
+
+#footer div {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
+#footer hr {
+  margin: 2px 0;
+}
+
+#footer ul {
+  text-transform: uppercase;
+  display: flex;
+  gap: 20px;
+}
+
+#footer ul li {
+  font-family: "Montserrat";
+  font-size: 12px;
+}
+
+#footer small {
+  margin-left: 20px;
+}
+
+@media screen and (max-width: 700px) {
+  #footer small {
+    margin-left: 0px;
+  }
+
+  #footer p {
+    font-size: 3vw;
+  }
+}

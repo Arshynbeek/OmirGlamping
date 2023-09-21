@@ -1,0 +1,213 @@
+#page_service {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+#service_title {
+  text-align: center;
+  text-transform: uppercase;
+  margin: 30px 0;
+}
+
+#service_title div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#service_title span {
+  font-size: 25px;
+  margin: 0 20px;
+}
+
+#service_title p {
+  margin-top: 12px;
+}
+
+#page_service .services {
+  padding: 15px 15px 20px 15px;
+}
+
+#service_price {
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: rgba(255, 174, 0, 0.616);
+}
+
+#service_price h4:first-child {
+  display: block;
+}
+
+#service_price h4:last-child {
+  display: none;
+}
+
+#booking {
+  margin-top: 20px;
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#booking h3 {
+  text-transform: uppercase;
+}
+
+#booking div {
+  display: flex;
+  align-items: center;
+}
+
+.book-l, .book-r {
+  margin-top: 8px;
+  font-size: 20px;
+  font-weight: 900;
+  font-family: sans-serif;
+}
+
+.book-l {
+  animation: booking-animation-1 0.6s alternate infinite;
+}
+.book-r {
+  animation: booking-animation-2 0.6s alternate infinite;
+}
+
+@keyframes booking-animation-1 {
+  0% {
+    transform: translateX(0);
+    filter: opacity(0);
+  }
+  100% {
+    transform: translateX(10px);
+    filter: opacity(1);
+  }
+}
+
+@keyframes booking-animation-2 {
+  0% {
+    transform: translateX(0px);
+    filter: opacity(0);
+  }
+  100% {
+    transform: translateX(-10px);
+    filter: opacity(1);
+  }
+}
+
+#booking button {
+  width: 100px;
+  height: 40px;
+  margin: 10px 30px 0 30px;
+  border: 1px solid var(--black);
+  background-color: rgba(255, 174, 0, 0.616);
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+
+#booking button:hover {
+  transform: scale(1.1);
+}
+
+.services:last-child {
+  background-color: rgba(255, 174, 0, 0.616);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.services {
+  position: relative;
+  height: 360px;
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+  transition: background 0.3s;
+}
+
+.services img {
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.7);
+  z-index: -1;
+}
+
+.services div {
+  width: 50%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  border: 1px solid var(--white);
+}
+
+.services p {
+  margin-top: 40px;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+}
+
+.services span {
+  letter-spacing: 3.5px;
+}
+
+.services label {
+  font-size: 26px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.services small {
+  display: none;
+  margin-top: 30px;
+  transition: 0.3s;
+}
+
+.services button {
+  display: none;
+  width: 100%;
+  height: 35px;
+  margin-top: auto;
+  color: #ffffff;
+  background-color: transparent;
+  border: 1px solid var(--white);
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+
+.services:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+@media screen and (max-width: 1000px) {
+  #page_service {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .services:last-child {
+    display: flex;
+    border: 1px solid black;
+  }
+
+  #service_price h4:first-child {
+    display: none;
+  }
+
+  #service_price h4:last-child {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #page_service {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
